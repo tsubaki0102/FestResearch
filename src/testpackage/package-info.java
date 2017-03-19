@@ -2,7 +2,7 @@
  *
  */
 /**
- * @author Tsubaki
+ * @author tsubaki0102 <rockbouque@nifty.com>
  *
  */
-package test;
+package testpackage;

@@ -1,4 +1,4 @@
-package test;
+package testpackage;
 
 import java.awt.Container;
 import java.awt.event.ActionEvent;
@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 
 class SampleFrame extends JFrame {
 
@@ -28,7 +29,6 @@ class SampleFrame extends JFrame {
     btn.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        // TODO 自動生成されたメソッド・スタブ
         textField.setText("あ");
       }
     });
@@ -43,7 +43,12 @@ class SampleFrame extends JFrame {
   }
 
   public static void main(String[] args) {
-    SampleFrame frame = new SampleFrame();
-  }
 
+    SwingUtilities.invokeLater(new Runnable() {
+      public void run() {
+        SampleFrame frame = new SampleFrame();
+      }
+    });
+
+  }
 }
