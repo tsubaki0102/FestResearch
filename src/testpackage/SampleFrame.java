@@ -1,4 +1,4 @@
-package test;
+package testpackage;
 
 import java.awt.Container;
 import java.awt.event.ActionEvent;
@@ -28,7 +28,6 @@ class SampleFrame extends JFrame {
     btn.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
-        // TODO 自動生成されたメソッド・スタブ
         textField.setText("あ");
       }
     });
